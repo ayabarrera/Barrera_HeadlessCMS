@@ -2,7 +2,7 @@
 
 import styles from "./homepage.module.css";
 import { useState, useEffect } from "react";
-import HeaderFooter from "./headerfooter";
+import HeaderFooter from './HeaderFooter';
 
 
 export default function Home() {
@@ -28,7 +28,7 @@ export default function Home() {
   return (
     <HeaderFooter>
     <div>
-      <h1 className={styles.h1Header}>Aya's Trinket Collection</h1>
+      <h1 className={styles.h1Header}>Aya's Collection </h1>
       <div className={styles.gridContainer}>
         {trinkets.map((trinket) => (
           <div key={trinket.id} className={styles.itemContainer}>
