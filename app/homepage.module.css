@@ -1,3 +1,7 @@
+.h1Header{
+  text-align: center;
+}
+
 .gridContainer {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
