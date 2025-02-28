@@ -2,12 +2,11 @@
 
 import styles from "./homepage.module.css";
 import { useState, useEffect } from "react";
-import HeaderFooter from './HeaderFooter';
-
+import HeaderFooter from "./HeaderFooter";
 
 export default function Home() {
   const [trinkets, setTrinkets] = useState([]);
-  const directusUrl = "http://localhost:8055/assets/";
+  const directusUrl = 'http://localhost:8055/assets';
 
   useEffect(() => {
     async function fetchTrinkets() {
@@ -18,6 +17,7 @@ export default function Home() {
         }
         const data = await res.json();
         setTrinkets(data.data);
+        console.log("Fetched Trinkets:", data.data);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -27,28 +27,31 @@ export default function Home() {
 
   return (
     <HeaderFooter>
-    <div>
-      <h1 className={styles.h1Header}>Aya's Collection </h1>
-      <div className={styles.gridContainer}>
-        {trinkets.map((trinket) => (
-          <div key={trinket.id} className={styles.itemContainer}>
-            <h2>"{trinket.name}"</h2>
-            {trinket.image && (
-              <img
-                src={`${directusUrl}${trinket.image}`}
-                alt={trinket.name}
-                width={200}
-                height={200}
-              />
-            )}
-            {!trinket.image && <p>No Image Available</p>}
-            <p>Brand: {trinket.brand}</p>
-            <p>Model: {trinket.model}</p>
-            <p>Kind: {trinket.kind}</p>
-          </div>
-        ))}
+      <div>
+        <h1 className={styles.h1Header}>Aya's Collection </h1>
+        <div className={styles.gridContainer}>
+          {trinkets.map((trinket) => (
+            <div key={trinket.id} className={styles.itemContainer}>
+              <h2>"{trinket.name}"</h2>
+              {trinket.image && (
+                <>
+                  <img
+                    src = {`${directusUrl}/${trinket.image}`}
+                    alt={trinket.name}
+                    width={200}
+                    height={200}
+                  />
+                  {console.log("Image URL:", `${directusUrl}/${trinket.image}`)}
+                </>
+              )}
+              {!trinket.image && <p>No Image Available</p>}
+              <p>{trinket.brand}</p>
+              <p>{trinket.model}</p>
+              <p>{trinket.kind}</p>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
     </HeaderFooter>
   );
 }
