@@ -1,6 +1,6 @@
 .header {
-  background-color: #f9f5f0; 
-  padding: 20px; 
+  background-color: #f9f5f0;
+  padding: 20px;
   border-bottom: 1px solid #eee;
 }
 
@@ -11,22 +11,29 @@
 }
 
 .link {
-  margin-right: 30px; 
-  color: #4a4a4a; 
+  margin-right: 30px;
+  color: #4a4a4a;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s ease; 
+  transition: color 0.3s ease;
 }
 
-.link:hover {
-  color: #666; 
+.link:hover,
+.link:active,
+.link:focus {
+  color: #d9534f;
 }
 
 .footer {
-  background-color: #f9f5f0; 
-  padding: 20px; 
+  background-color: #f9f5f0;
+  padding: 20px;
   text-align: center;
-  color: #666; 
-  border-top: 1px solid #eee; 
-  margin-top: 40px; 
+  color: #666;
+  border-top: 1px solid #eee;
+  margin-top: 40px;
+}
+
+.active {
+  color: #d9534f; 
+  font-weight: bold;
 }
