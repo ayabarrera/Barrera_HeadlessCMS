@@ -4,6 +4,7 @@ import styles from "./homepage.module.css";
 import { useState, useEffect } from "react";
 import HeaderFooter from "./headerfooter";
 
+
 export default function Home() {
   const [trinkets, setTrinkets] = useState([]);
   const directusUrl = "http://localhost:8055/assets/";
@@ -41,7 +42,7 @@ export default function Home() {
               />
             )}
             {!trinket.image && <p>No Image Available</p>}
-            <p>{trinket.brand}</p>
+            <p>Brand: {trinket.brand}</p>
             <p>Model: {trinket.model}</p>
             <p>Kind: {trinket.kind}</p>
           </div>
