@@ -1,6 +1,28 @@
 .h1Header {
+  font-family: "Rock 3D", system-ui;
   text-align: center;
   margin: 60px;
+  font-size: 5em; 
+  font-weight: bold; 
+  color: #d9534f;
+  padding: 20px;
+  line-height: 1.2; 
+  white-space: nowrap; 
+  
+ 
+  text-shadow: 
+    -2px -2px 0 #ffe082, 
+    2px -2px 0 #ffe082,
+    -2px 2px 0 #ffe082,
+    2px 2px 0 #ffe082,
+    -4px -4px 0 #ffe082, 
+    4px -4px 0 #ffe082,
+    -4px 4px 0 #ffe082,
+    4px 4px 0 #ffe082,
+    -1px -1px 0 #ffe082, 
+    1px -1px 0 #ffe082,
+    -1px 1px 0 #ffe082,
+    1px 1px 0 #ffe082;
 }
 
 .gridContainer {
@@ -11,36 +33,40 @@
 }
 
 .itemContainer {
-  background-color: #f8f8f8;
-  border: 1px solid #eee;
+  background-color: #f9f5f0; 
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08); 
   padding: 20px;
-  transition: transform 0.2s ease-in-out;
-  display: flex; 
-  flex-direction: column; 
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
 .itemContainer:hover {
-  transform: translateY(-25px);
+  transform: translateY(-25px); 
+  background-color: #cfccc9;
 }
 
 .itemContainer h2 {
-  font-size: 1.2rem;
+  font-size: 1.3rem; 
   font-weight: 600;
   margin-bottom: 10px;
   text-align: center;
+  color: #4a4a4a;
 }
 
 .itemContainer p {
   font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 5px;
+  color: #555;
 }
 
 .itemContainer img {
-  border-radius: 4px;
-  margin-bottom: 10px;
+  border-radius: 8px;
+  margin-bottom: 15px;
   object-fit: contain;
+  max-width: 80%;
+  height: auto;
 }

@@ -1,22 +1,32 @@
 .header {
-    background-color: black;
-    padding: 10px 20px;
-  }
-  
-  .nav {
-    display: flex;
-    justify-content: flex-end;
-    margin: 20px;
-  }
-  
-  .link {
-    margin-right: 60px; 
-    color: pink;
-    text-decoration: none;
-  }
-  
-  .footer {
-    background-color: black;
-    padding: 10px 20px;
-    text-align: center;
-  }
+  background-color: #f9f5f0; 
+  padding: 20px; 
+  border-bottom: 1px solid #eee;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px;
+}
+
+.link {
+  margin-right: 30px; 
+  color: #4a4a4a; 
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease; 
+}
+
+.link:hover {
+  color: #666; 
+}
+
+.footer {
+  background-color: #f9f5f0; 
+  padding: 20px; 
+  text-align: center;
+  color: #666; 
+  border-top: 1px solid #eee; 
+  margin-top: 40px; 
+}
