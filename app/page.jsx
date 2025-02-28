@@ -2,6 +2,7 @@
 
 import styles from "./homepage.module.css";
 import { useState, useEffect } from "react";
+import HeaderFooter from "./headerfooter";
 
 export default function Home() {
   const [trinkets, setTrinkets] = useState([]);
@@ -24,6 +25,7 @@ export default function Home() {
   }, []);
 
   return (
+    <HeaderFooter>
     <div>
       <h1 className={styles.h1Header}>Aya's Trinket Collection</h1>
       <div className={styles.gridContainer}>
@@ -46,5 +48,6 @@ export default function Home() {
         ))}
       </div>
     </div>
+    </HeaderFooter>
   );
 }
